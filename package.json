@@ -1,5 +1,5 @@
 {
-  "name": "my-hyperdev-app",
+  "name": "node-blog",
   "version": "0.0.1",
   "description": "What am I about?",
   "main": "server.js",
@@ -24,5 +24,6 @@
     "hyperdev",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Michael Staton"
 }
