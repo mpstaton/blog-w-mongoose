@@ -9,9 +9,7 @@ const {BlogPosts} = require('../models');
 
 // we're going to add some items to BlogPosts
 // so there's some data to look at
-BlogPosts.create('January Blog', 'Lorem Ipsum for January', 'Michael Staton');
-BlogPosts.create('February Blog', 'Lorem Ipsum for February', 'Michael Staton');
-BlogPosts.create('March Blog', 'Lorem Ipsum for March', 'Michael Staton');
+
 
 
 // when the root of this router is called with GET, return
@@ -32,7 +30,12 @@ router.post('/', jsonParser, (req, res) => {
     }
   }
 
-  const item = BlogPosts.create(req.body.name, req.body.budget);
+  const item = BlogPosts.create(
+    req.body.title, 
+    req.body.content, 
+    req.body.author,
+    req.body.publishDate
+    );
   res.status(201).json(item);
 });
 
@@ -72,7 +75,7 @@ router.put('/:id', jsonParser, (req, res) => {
 // try to delete that item from BlogPosts.
 router.delete('/:id', (req, res) => {
   BlogPosts.delete(req.params.id);
-  console.log(`Deleted shopping list item \`${req.params.ID}\``);
+  console.log(`Deleted BlogPost \`${req.params.ID}\``);
   res.status(204).end();
 });
 

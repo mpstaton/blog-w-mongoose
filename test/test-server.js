@@ -18,7 +18,7 @@ describe('Blog Posts', function() {
 
 	it('should list BlogPosts on GET', function() {
 		return chai.request(app)
-			.get('blog-posts')
+			.get('http://localhost:8080/blog-posts')
 			.then(function(res) {
 				res.should.have.status(200);
 				res.should.be.json;

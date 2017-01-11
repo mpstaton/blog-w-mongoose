@@ -1,4 +1,4 @@
-Shopping list v4
+Testing BlogPosts 
 ================
 
-https://github.com/Thinkful-Ed/node-shopping-list-v4
+https://github.com/mpstaton/test-node-blog
