@@ -60,11 +60,11 @@ const BlogPosts = {
   }
 };
 
-function createBlogPostsModel() {
+function createBlogPosts() {
   const storage = Object.create(BlogPosts);
   storage.posts = [];
   return storage;
 }
 
 
-module.exports = {BlogPosts: createBlogPostsModel()};
+module.exports = {BlogPosts: createBlogPosts()}

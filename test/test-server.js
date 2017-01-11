@@ -7,7 +7,7 @@ const should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('BlogPosts', function() {
+describe('Blog Posts', function() {
 	//open and close server
 	before(function() {
 		return runServer();
