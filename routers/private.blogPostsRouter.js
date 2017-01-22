@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 
-const {BlogPosts} = require('../models');
+const {BlogPosts} = require('../models/private.blogposts.js');
 
 // we're going to add some items to BlogPosts
 // so there's some data to look at
