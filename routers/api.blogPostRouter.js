@@ -39,14 +39,12 @@ router.get('/posts/:id', (req, res) => {
 });
 
 router.post('/posts', (req, res) => {
-  /*
 	const requiredFields = ['title', 'content'];
 	requiredFields.forEach(field => {
 		if (! (field in req.body && re.body[field])) {
 			return res.status(400).json({message: `Must specify value for ${field}`});
 		}
 	}); 
-  */
   console.log("CAPTURE FORM DATA:", req.body);
 	BlogPost
 		.create({
@@ -72,6 +70,8 @@ router.put('/posts/:id', (req, res) => {
     console.error(message);
     res.status(400).json({message: message});
   }
+//mongoimport --db test-blog --collection blogposts --drop --file ~/code/blog-w-mongoose/seed-data.json --host mongodb://user:password@ds161059.mlab.com:61059/test-blog
+//mongoimport --db test-blog --collection blogposts --drop --file ~/code/blog-w-mongoose/seed-data.json --host ds161059.mlab.com:61059/test-blog --port 49577  -u user -p password
 
   // we only support a subset of fields being updateable.
   // if the user sent over any of the updatableFields, we udpate those values
